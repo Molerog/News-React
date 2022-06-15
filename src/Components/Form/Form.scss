@@ -1,0 +1,13 @@
+.GeneralContainer{
+    display:flex;
+    border:2px solid green;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.FormContainer{
+    display:flex;
+    flex-direction: column;
+    flex-basis:50%
+}
