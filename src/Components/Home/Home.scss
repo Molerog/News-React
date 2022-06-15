@@ -1,4 +1,13 @@
 .CentralContainer{
     display:flex;
     justify-content: center;
+    align-items: center;
+    background-image: url('../../Assets/city.jpg');
+    background-attachment: fixed;
+    flex:1;
+    
+    h1{
+        color:white;
+    }
 }
+

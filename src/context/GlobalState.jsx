@@ -19,7 +19,6 @@ export const GlobalProvider = ({ children }) => {
       type: "GET_NEWS",
       payload: res.data.results,
     });
-    console.log(res.data.results);
   };
   return (
     <GlobalContext.Provider

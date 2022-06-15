@@ -1,8 +1,8 @@
-
+import image from '../../../Assets/dailyplanet.png'
 
 const Hero = () => {
   return (
-    <div className = 'Hero'>The Daily Planet</div>
+    <img className='HeroContainer' src={image} alt='pic'/>
   )
 }
 

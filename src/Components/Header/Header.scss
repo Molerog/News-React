@@ -1,12 +1,13 @@
 .HeaderContainer{
-    border: 2px solid black;    
     display:flex;
     align-items: center;
     flex-direction: column;
+    gap:3em;
 }
 
-.Hero{
-    font-size:5em;   
+.HeroContainer{
+    
+    width: 40%;
 }
 
 .Items{
