@@ -43,7 +43,7 @@ const Form = () => {
     clearState();
     setMessage("formulario enviado con éxito");
     setTimeout(() => {
-      navigate("/");
+      navigate("/list");
     }, 3000);
   };
 
@@ -81,7 +81,7 @@ const Form = () => {
             name="body"
           />
           <button type="submit" disabled={btnDisabled}>
-            Enviar
+            Post
           </button>
           {message}
         </form>
