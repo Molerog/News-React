@@ -1,11 +1,11 @@
 .GeneralContainer{
     display:flex;
-    border:2px solid green;
+    // border:2px solid green;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
     background-image: url('../../Assets/paper.jpg');
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-size: cover;
     opacity: 0.8;
 }
@@ -23,11 +23,27 @@
 .ButtonContainer{
     display:flex;
     justify-content: center;
+    
     button{
         flex-basis:50%;
         height: 5vh;
         border-radius: 1em;
+        background-color: #9c837c;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 0.6;
+        transition: 0.3s;
+        border-radius: 2em;
+        cursor: pointer;
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
+    button:hover {opacity: 1}
 }
 
 .InputContainer{
@@ -54,7 +70,9 @@
     background-color: gray;
 }
 
-
+.InputText textarea{
+    border-radius:0 2em 2em 2em;
+}
 
 
     

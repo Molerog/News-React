@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+#  <center> 📰 React News Page 📰</center> 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ ## 📑 Indice 
 
-## Available Scripts
+ - [Sobre el proyecto](#sobre-el-proyecto)
 
-In the project directory, you can run:
+    - [Instalación y despliegue](#instalacion-y-despliegue)
 
-### `npm start`
+    - [Tecnologías utilizadas](#tecnologias-utilizadas)
+    
+- [Requerimientos](#requerimientos)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Estructura de la página](#estructura-de-la-pagina)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Documentacion de React](#documentacion-de-react)
 
-### `npm test`
+- [Rutas](#rutas)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Retos presentados](#retos-presentados)
 
-### `npm run build`
+- [Agradecimientos](#agradecimientos)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Futura implementaciones](#futuras-implementaciones)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Autor](#autor)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+# Sobre el proyecto 🙇‍♀️
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##  Instalación y despliegue 🤖
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Primero instalamos react con la carpeta que contendrá el proyecto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npx create-react-app nombre-aplicacion	 
+```
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Una buena idea es instalar esta extensión para acceder a los snippets de React
+```
+https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+La siguiente herramienta de desarrollador nos permite ver las jerarquías de los componentes de React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadoplj
+bjfkapdkoienihi?hl=es
+```
 
-### Analyzing the Bundle Size
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Deberemos installar el siguiente paquete para poder crear rutas en nuestros componentes
 
-### Making a Progressive Web App
+```
+$ npm install react-router-dom@6
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br>
 
-### Advanced Configuration
+Instalamos el paquete sass para aplicar reglas anidadas y funciones con variables entre otras cosas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+$ npm install sass
 
-### Deployment
+```
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Tecnologías utilizadas ⛏️
 
-### `npm run build` fails to minify
+- HTML
+- CSS
+- Sass
+- Javascript
+- React
+- React-GlobalContext
+- React-Router
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+
+# Requerimientos 🦂
+
+* Un mini-proyecto de React para practicar todos los elementos básicos de React ya vistos.
+* Implementar una "web de noticias"
+* Uso de [NYT News API](https://developer.nytimes.com/apis).
+* Uso del router React
+* Utilizar componentes anidados (cabecera, home, pie de página, formulario, lista de noticias).
+* Utilizar React Context
+* Utilizar SASS
+
+<br><br>
+
+## Estructura de la página 🏗️
+
+Cada ruta construye una página con tres componentes: La cabecera y el pie de página son comunes a
+todas ellas. La Cabecera tiene tres botones, con `<Link />`, para acceder a las
+tres rutas.
+
+<br><br>
+
+# Rutas
+
+
+
+**Home** `/`
+* Se compone de un Hero
+* Un navbar
+* Una imagen central
+* Un footer
+
+<br>
+
+![Home screenshot](./src/Assets/Home.png)
+
+
+
+
+
+# Documentación de React 👓
+
+https://es.reactjs.org/docs/getting-started.html
+
+<br>
+
+# Retos presentados 💢
+
+El mayor reto fue detectar por qué, al mapear el array de objetos obtenido de la API, no siempre mostraba las noticias deseadas. Lo que ocurría era que habían objetos que no tenían imagen y eso hacía que el resto no se pintara. Una vez descubierto el problema se tuvo que programar una condición para que, al detectar un objeto sin imagen, la declarara null.
+
+
+<br>
+
+# Agradecimientos 🤝
+
+
+Agradecimientos a Sofía, Ger e Iván por su inestimable ayuda para sacar adelante el proyecto. 
+
+Gracias a Mike por compartir su saber en css y la programación.
+Gracias a Xavi por aguantar que lo saque de su concentración para resolver mis dudas en tiempo récord.
+Gracias a Vanesa por iluminarme con el LocalStorage y entender un poco mejor todo lo relacionado al globalcontext de React.
+
+
+<br>
+
+# Futuras implementaciones 🚀
+
+
+- Añadir más estados
+
+
+<br>
+
+# Autor 🐧
+
+Germán Molero
+
+- https://github.com/Molerog

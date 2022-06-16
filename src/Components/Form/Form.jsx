@@ -30,6 +30,7 @@ const Form = () => {
       setMessage(null);
       setBtnDisabled(false);
     }
+    console.log(event.target.value)
 
     setData({
       ...data,
