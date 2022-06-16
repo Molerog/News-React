@@ -21,10 +21,10 @@ const Form = () => {
   const clearState = () => {
     setData(initialState);
   };
-
+  console.log(data)
   const handleInputChange = (event) => {
-    if (data.body.length < 3) {
-      setMessage("You have to add text");
+    if (data.body.length < 30 || data.headline.length < 4 || data.byline.length < 4) {
+      setMessage("You need to fill the fields");
       setBtnDisabled(true);
     } else {
       setMessage(null);
