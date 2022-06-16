@@ -13,5 +13,49 @@
 .FormContainer{
     display:flex;
     flex-direction: column;
-    flex-basis:50%
+    flex-basis:50%;
+    gap:1em;
+    background-color: black;
+    flex-basis:0;
+    border-radius:2em;
 }
+
+.ButtonContainer{
+    display:flex;
+    justify-content: center;
+    button{
+        flex-basis:50%;
+        height: 5vh;
+        border-radius: 1em;
+    }
+}
+
+.InputContainer{
+    display:flex;
+    flex-direction: column;
+    gap:1em;
+    padding:1em;
+    border-radius:2em;
+    color:white;
+    // border:2px solid blue;
+    background-color: black;
+    
+}
+
+.Message{
+    display:flex;
+    justify-content: center;
+    color:white;
+}
+
+.PaddingContainer{
+    padding:1em;
+    border-radius:2em;
+    background-color: gray;
+}
+
+
+
+
+    
+       

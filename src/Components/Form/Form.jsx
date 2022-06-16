@@ -1,4 +1,4 @@
-import '../Form/Form.scss'
+import "../Form/Form.scss";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -11,8 +11,8 @@ const Form = () => {
   const initialState = {
     headline: "",
     byline: "",
-    location:"",
-    body:""
+    location: "",
+    body: "",
   };
   const [data, setData] = useState(initialState);
   const [btnDisabled, setBtnDisabled] = useState(true);
@@ -38,7 +38,7 @@ const Form = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    saveData()
+    saveData();
     console.log("se lanza el formulario", data);
     clearState();
     setMessage("formulario enviado con éxito");
@@ -50,40 +50,67 @@ const Form = () => {
   return (
     <>
       <div className="GeneralContainer">
-        <form className='FormContainer' onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="name"
-            onChange={handleInputChange}
-            value={data.headline}
-            name="headline"
-          />
-          <input
-            type="text"
-            placeholder="byline"
-            onChange={handleInputChange}
-            value={data.byline}
-            name="byline"
-          />
-          <input
-            type="text"
-            placeholder="location"
-            onChange={handleInputChange}
-            value={data.location}
-            name="location"
-          />
-          <textarea rows='15'
-            cols='55'
-            type="text"
-            placeholder="body"
-            onChange={handleInputChange}
-            value={data.body}
-            name="body"
-          />
-          <button type="submit" disabled={btnDisabled}>
-            Post
-          </button>
-          {message}
+        <form className="FormContainer" onSubmit={handleSubmit}>
+          <div className="PaddingContainer">
+            <div className="InputContainer">
+              <div>
+                <h3>TITLE</h3>
+                <div className="InputText">
+                  <input
+                    type="text"
+                    placeholder="headline"
+                    onChange={handleInputChange}
+                    value={data.headline}
+                    name="headline"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3>AUTHOR</h3>
+                <div className="InputByline">
+                  <input
+                    type="text"
+                    placeholder="byline"
+                    onChange={handleInputChange}
+                    value={data.byline}
+                    name="byline"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3>LOCATION</h3>
+                <div className="InputLocation">
+                  <input
+                    type="text"
+                    placeholder="location"
+                    onChange={handleInputChange}
+                    value={data.location}
+                    name="location"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3>TEXT</h3>
+                <div className="InputText">
+                  <textarea
+                    rows="15"
+                    cols="55"
+                    type="text"
+                    placeholder="body"
+                    onChange={handleInputChange}
+                    value={data.body}
+                    name="body"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="ButtonContainer">
+            <button type="submit" disabled={btnDisabled}>
+              <h2>Post</h2>
+            </button>
+          </div>
+          <span className="Message">{message}</span>
         </form>
       </div>
     </>
