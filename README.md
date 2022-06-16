@@ -104,7 +104,7 @@ tres rutas.
 
 <br><br>
 
-# Rutas
+# Rutas 🚊
 
 
 
@@ -118,9 +118,33 @@ tres rutas.
 
 ![Home screenshot](./src/Assets/Home.png)
 
+<br>
 
+**Form** `/form`
+* Form 
+* Input título
+* Input autor
+* Input localización
+* Input texto
 
+El form guarda los datos introducidos en el LocalStorage
 
+<br>
+
+![Home screenshot](./src/Assets/Form.png)
+
+<br>
+
+**News** `/list`
+* Grid
+* Flexbox
+* API NYT
+
+Accedemos a la API de NYT para pintar la información que deseamos (titular,imagen,autor...)
+
+![Home screenshot](./src/Assets/News.png)
+
+<br>
 
 # Documentación de React 👓
 
@@ -137,12 +161,14 @@ El mayor reto fue detectar por qué, al mapear el array de objetos obtenido de l
 
 # Agradecimientos 🤝
 
+Gracias a Mike por hacerme una persona más 'stylish'.
+Gracias a Xavi por hacerme una persona más lógica.
+Gracias a Rebeca por ayudarme a 'reactionar'.
+Gracias a David por hacerme una persona más 'responsiva'.
+Gracias a Vanesa por llenarme el LocalStorage.
+
 
 Agradecimientos a Sofía, Ger e Iván por su inestimable ayuda para sacar adelante el proyecto. 
-
-Gracias a Mike por compartir su saber en css y la programación.
-Gracias a Xavi por aguantar que lo saque de su concentración para resolver mis dudas en tiempo récord.
-Gracias a Vanesa por iluminarme con el LocalStorage y entender un poco mejor todo lo relacionado al globalcontext de React.
 
 
 <br>
