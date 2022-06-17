@@ -1,4 +1,7 @@
 import './Home.scss'
+import React from "react";
+
+console.log(React.useState)
 
 const Home = () => {
   return (

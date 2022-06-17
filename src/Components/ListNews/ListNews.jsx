@@ -8,28 +8,29 @@ const ListNews = () => {
   }, []);
 
   const llamarLink = (url) => {
-    window.location.replace(url)
-  }
+    window.location.replace(url);
+  };
   const article = news.map((element, i) => {
     return (
-      <>
+      <div key={i}>
         {element.multimedia ? (
-          <div className="NewsContainer" key={i}>
+          <div className="NewsContainer" >
             <div className="NewsHeader">
               <h2>{element.title}</h2>
               <img src={element.multimedia[3].url} alt="pic" />
             </div>
             <h3 className="Abstract">{element.abstract}</h3>
             {/* <img src={element.multimedia[3].url} alt='pic'/> */}
-            <span className='Date'>{element.published_date.slice(0,10)}</span>
-            <h3 className='Byline'>{element.byline}</h3>
+            <span className="Date">{element.published_date.slice(0, 10)}</span>
+            <h3 className="Byline">{element.byline}</h3>
             {/* <a href={element.url}>Check this new</a> */}
-            <button className='Button' onClick= {()=>llamarLink(element.url)}>
-               Check this new
+            <button className="Button" onClick={() => llamarLink(element.url)}>
+              Check this new
             </button>
-          </div>
+          </div>       
         ) : null}
-      </>
+      </div>
+      
     );
   });
   return <div className="MainContainer">{article}</div>;

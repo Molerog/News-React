@@ -1,5 +1,7 @@
 import {Link} from 'react-router-dom'
 
+console.log(['react-router-dom'])
+
 const Navbar = () => {
     const items =[{
         id:1,

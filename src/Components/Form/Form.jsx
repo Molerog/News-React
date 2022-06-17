@@ -14,6 +14,8 @@ const Form = () => {
     location: "",
     body: "",
   };
+
+
   const [data, setData] = useState(initialState);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
@@ -21,7 +23,6 @@ const Form = () => {
   const clearState = () => {
     setData(initialState);
   };
-  console.log(data)
   const handleInputChange = (event) => {
     if (data.body.length < 30 || data.headline.length < 4 || data.byline.length < 4) {
       setMessage("You need to fill the fields");
@@ -30,8 +31,6 @@ const Form = () => {
       setMessage(null);
       setBtnDisabled(false);
     }
-    console.log(event.target.value)
-
     setData({
       ...data,
       [event.target.name]: event.target.value,
